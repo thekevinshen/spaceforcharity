@@ -1,0 +1,17 @@
+---
+applications:
+  .:
+    name: SpaceForCharity
+    framework:
+      name: php
+      info:
+        mem: 128M
+        description: PHP Application
+        exec: 
+    infra: hp
+    url: ${name}.${target-base}
+    mem: 128M
+    instances: 1
+    services:
+      mysql-4f094:
+        type: mysql
