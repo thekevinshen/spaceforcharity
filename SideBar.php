@@ -90,7 +90,6 @@
 			</div>
 			<div id="aboutLinks">
 				<a href="" id="howItWorks">How it works</a><font color="lightgray"> | </font><a id="about" href="">About</a><font color="lightgray"> | </font><a id="home" href="" onclick="myFrameReturnHome()">Home</a>
-				<p id="aboutContent">What we're all about. <br/> SpaceForCharity is a web project by Kevin Shen, Ryan Cleary, and Johnny Rusnak to provide an innovative way for people all across the world to contribute to and become educated about poverty around the world.</p>
 			</div>
 			
 

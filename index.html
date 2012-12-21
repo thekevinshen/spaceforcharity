@@ -9,15 +9,23 @@
 	<div class="row">
 		
 		<div class="span9">
-			<iframe id="myFrame" onload="iFrameClicked()" src="landing.html"/></iframe>
+			<iframe id="myFrame" onload="iFrameClicked(); myFrameOnLoad()" src="landing.html"/></iframe>
 		</div>
 		<div class="hiddenSpread" id="hiddenHowItWorks">
 				<b>How it works</b>
+				<a href="" onclick="hideThisHiddenDiv()"><img src="images/icons/X-glow.png" class="icon iconClose"/></a>
+				<hr />
+				<br/>
+				This is a hidden div.
+		</div>
+		<div class="hiddenSpread" id="hiddenAbout">
+				<b>About</b>
+				<hr />
 				<br/>
 				This is a hidden div.
 		</div>
 		<div class="span3">
-			<iframe id="iSideBar" src="SideBar.php"></iframe>
+			<iframe id="iSideBar" src="SideBar.php" onload="SideBarOnLoad()"></iframe>
 		</div>
 		
 	
