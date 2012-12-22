@@ -54,43 +54,33 @@ $(document).ready(function() {
 		$("#hiddenAbout", parent.document).hide("fold", 700);
 	});
 
+	$(".iconClose").click(function(){
+		$("#hiddenHowItWorks").hide("fold", 700);
+	});
+	
+
 }); //End $(document).ready() functions
 
 //---------------------------Hidden Div functions----------------------
 
-function closeAllDivs(){
+/*function closeAllDivs(){
 	//close all divs
 	hideAllHiddenDivs();
 }
+function hideAllHiddenDivs(div){	
+	alert("this div = " + div.id);
+	//div.hide("fold", 700);
+	
+	//$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+	//$("#hiddenAbout", parent.document).hide("fold", 700);
+}*/
 
 //---------------------------Reload Functions----------------------------------
-function iFrameClicked(){
-	reloadSideBar();
-}
-
 function reloadSideBar() {
     var ifrm = document.getElementById('iSideBar');
    	if (ifrm)	{
 			ifrm.setAttribute('src', 'SideBar.php');
    	}
-}
-
-function myFrameOnLoad(){
-	hideAllHiddenDivs();
-}
-
-function SideBarOnLoad(){
-	hideAllHiddenDivs();
-}
-
-function hideAllHiddenDivs(){
-	$("#hiddenHowItWorks").hide("fold", 700);
-	$("#hiddenAbout").hide("fold", 700);
-}
-
-function hideThisHiddenDiv(){
-	alert("in hideThisHiddenDiv(). this = " + this.id);	
-	parent.hide("fold", 700);
 }
 
 //--------------------------Navigation Functions-------------------------------
