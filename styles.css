@@ -10,7 +10,7 @@ a {
 }
 body {
 	/*font-family: helvetica;*/
-	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Oswald', sans-serif;
 	margin: 0px;
 }
 iframe{
@@ -29,7 +29,25 @@ h1{
 .iconClose{
 	float: right;
 }
-/*----------Custom Component Styles----------*/
+/*----------Custom Element Styles-----------*/
+.moneyRaised{
+	color:#080; 
+	text-shadow: 1px 1px 1px white, inset -1px -1px 1px black;
+	font-size:2em;
+	font-style: bold
+}
+.moneyRaised small{
+	text-align: top;
+}
+.statNumbers{
+	font-weight: 700;
+}
+.statText{
+	font-size: 0.7em;
+	color: #ccc;
+}
+
+/*----------Custom Div Styles----------*/
 #sidebar{
 	width: 100%;
 }
@@ -81,10 +99,6 @@ h1{
 	padding-left: 5px;
 	box-shadow: 0px 1px 2px #999;
 }
-.statText{
-	font-size: 0.7em;
-	color: #ccc;
-}
 .hiddenSpread{
 	display: none;
 	background-image:url('images/bgnoise_divdark.png');
@@ -101,10 +115,7 @@ h1{
 }
 /*-------animation styles-------*/
 .grayBG{
-	background: #f0f0f0;
-}
-.lightGrayBG{
-	background: #f9f9f9;
+	background-image:url('images/bgnoise.png');
 }
 .grayDarkBG{
 	color: #a0a0a0;
@@ -156,3 +167,20 @@ button:hover {
 	/* W3C Markup, IE10 Release Preview */ 
 	background-image: linear-gradient(to bottom right, #87DBFF 0%, #48B2E2 100%);
 }
+
+
+
+
+
+/*----Fonts-----*/
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Yesteryear|Oswald:700,400,300|Pacifico);
+
+
+/*------------------------
+
+Icons courtesy of: Matt Gentile - "Pixel UI Icon Set"
+http://www.icondeposit.com/theicondeposit:21
+Creative Commons Attribution 3.0 License
+
+-------------------------*/

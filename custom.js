@@ -9,11 +9,9 @@ This File Contains:
 //-------------Animations-----------------
 $(document).ready(function() {
 	$("#infoBox").hover(function(){
-		$(this).removeClass("lightGrayBG");
 		$(this).addClass("grayBG");
 	}, function(){
 		$(this).removeClass("grayBG");
-		$(this).addClass("lightGrayBG");
 	});
 	
 	$("#howItWorks").hover(function(){
@@ -100,13 +98,10 @@ function goToUrl(){ //sends myFrame to url from form textfield. utilizes "landin
 	var thisForm = document.forms[0];
 	var thisTextField = thisForm.elements["URLfieldName"];
 	var urlString = thisTextField.value;
-	goToIFrameURL(urlString);
-}
 
-function goToIFrameURL(string){ //triggers myFrame reload from inside SideBar (needa "parent.document" since myFrame is in the parent window)
 	var ifrm = parent.document.getElementById('myFrame');
 	if (ifrm) {
-		ifrm.setAttribute('src', 'http://'+string);
+		ifrm.setAttribute('src', 'http://'+urlString);
 	}
 }
 

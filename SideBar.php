@@ -62,6 +62,11 @@
 
 	}
 
+
+
+	$money_raised = number_format ( $newClickCount*0.001 , /*decimals*/ 3 , /*dec_point*/ '.' , /*thousands_sep*/ ',' );
+	$sq_ft = number_format ( $newClickCount*0.04069, /*decimals*/ 1 , /*dec_point*/ '.' , /*thousands_sep*/ ',' );
+
 	mysql_close($con);
 	?>
 	
@@ -76,8 +81,13 @@
 				<br style="clear:both">
 			</div>
 			<div id="siteStats">
-				<b><?php 	echo($newClickCount);	?></b><font class="statText"> Total pages visits</font> <br />
-				<b style="color:orange"><?php 	echo("$".$newClickCount*0.001);	?></b><font class="statText"> Total raised</font> <br />
+				<font class="moneyRaised"><small>$</small><?php 	echo($money_raised);	?></font>
+				<font class="statText"> raised</font> <br />
+				<font class="statNumbers"><?php 	echo($newClickCount);	?></font>
+				<font class="statText"> page visits</font> <br />
+				<font class="statNumbers"><?php 	echo($sq_ft);	?></font>
+				<font class="statText"> ft&sup2; screen-space donated</font> <br />
+				
 				<small style="color:gray; float:right; font-size: .5em">(assuming $1 CPM) </small>
 			</div>
 			<div class="bingBar">
@@ -103,14 +113,6 @@
 			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
 			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 			
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-			
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-		
 		</div><!--adsBox-->
 	</div><!--span3-->
 
