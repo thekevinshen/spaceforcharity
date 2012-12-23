@@ -41,28 +41,24 @@ $(document).ready(function() {
 	});
 	
 	//-----------------Hidden Div functions-------------------
-	$("#howItWorks").click(function(){
-		if (condit = $("#hiddenHowItWorks").is(":visible")){ 
-			//if this div is already open, then hide all divs
+	$("#howItWorks").toggle(function(){
+		//close all divs and open this one
+			$("#hiddenHowItWorks", parent.document).show("fold", 700);
+			$("#hiddenAbout", parent.document).hide("fold", 700);
+		}, function(){
+		//hide all divs
 			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
 			$("#hiddenAbout", parent.document).hide("fold", 700);
-		} else {
-			//if this div is not open, close all divs and open this one
-			$("#hiddenAbout", parent.document).hide("fold", 700);
-			$("#hiddenHowItWorks", parent.document).show("fold", 700);
-		}
 	});
 		
-	$("#about").click(function(){
-		if (condit = $("#hiddenHowItWorks").is(":visible")){
-			//if this div is already open, then hide all divs
-			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
-			$("#hiddenAbout", parent.document).hide("fold", 700);
-		} else {
-			//if this div is not open, close all divs and open this one
+	$("#about").toggle(function(){
+		//close all divs and open this one
 			$("#hiddenAbout", parent.document).show("fold", 700);
 			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
-		}
+		}, function(){
+		//hide all divs
+			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+			$("#hiddenAbout", parent.document).hide("fold", 700);
 	});	
 
 	$(".iconClose").click(function(){
