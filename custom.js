@@ -1,13 +1,15 @@
 /*
 This File Contains:
 1. Animations
+	a. Mouse-over functions
+	b. Hidden Div functions
 2. Reload Functions
 3. Navigation Functions
-
 */
 
 //-------------Animations-----------------
 $(document).ready(function() {
+	//-----------------Mouse-over functions-------------------
 	$("#infoBox").hover(function(){
 		$(this).addClass("grayBG");
 	}, function(){
@@ -38,42 +40,39 @@ $(document).ready(function() {
 		$(this).removeClass("grayDarkBG");
 	});
 	
-	$("#howItWorks").toggle(function(){
-		$("#hiddenHowItWorks", parent.document).show("fold", 700);
-		// hide the rest of the divs in case any are open
-		$("#hiddenAbout", parent.document).hide("fold", 700);
-	}, function(){
-		$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+	//-----------------Hidden Div functions-------------------
+	$("#howItWorks").click(function(){
+		if (condit = $("#hiddenHowItWorks").is(":visible")){ 
+			//if this div is already open, then hide all divs
+			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+			$("#hiddenAbout", parent.document).hide("fold", 700);
+		} else {
+			//if this div is not open, close all divs and open this one
+			$("#hiddenAbout", parent.document).hide("fold", 700);
+			$("#hiddenHowItWorks", parent.document).show("fold", 700);
+		}
 	});
-
-	$("#about").toggle(function(){
-		$("#hiddenAbout", parent.document).show("fold", 700);
-		// hide the rest of the divs in case any are open
-		$("#hiddenHowItWorks", parent.document).hide("fold", 700);
-	}, function(){
-		$("#hiddenAbout", parent.document).hide("fold", 700);
-	});
+		
+	$("#about").click(function(){
+		if (condit = $("#hiddenHowItWorks").is(":visible")){
+			//if this div is already open, then hide all divs
+			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+			$("#hiddenAbout", parent.document).hide("fold", 700);
+		} else {
+			//if this div is not open, close all divs and open this one
+			$("#hiddenAbout", parent.document).show("fold", 700);
+			$("#hiddenHowItWorks", parent.document).hide("fold", 700);
+		}
+	});	
 
 	$(".iconClose").click(function(){
+		//close all divs
 		$("#hiddenHowItWorks").hide("fold", 700);
+		$("#hiddenAbout").hide("fold", 700);
 	});
-	
 
 }); //End $(document).ready() functions
 
-//---------------------------Hidden Div functions----------------------
-
-/*function closeAllDivs(){
-	//close all divs
-	hideAllHiddenDivs();
-}
-function hideAllHiddenDivs(div){	
-	alert("this div = " + div.id);
-	//div.hide("fold", 700);
-	
-	//$("#hiddenHowItWorks", parent.document).hide("fold", 700);
-	//$("#hiddenAbout", parent.document).hide("fold", 700);
-}*/
 
 //---------------------------Reload Functions----------------------------------
 function reloadSideBar() {
@@ -85,9 +84,7 @@ function reloadSideBar() {
 
 //--------------------------Navigation Functions-------------------------------
 function goToUrl(){ //sends myFrame to url from form textfield. utilizes "landingGoToIFrameURL(string)" instead of goToIFrameURL(string), otherwise same as goToUrl(form)
-	var thisForm = document.forms[0];
-	var thisTextField = thisForm.elements["URLfieldName"];
-	var urlString = thisTextField.value;
+	var urlString = document.forms[0].elements["URLfieldName"].value;
 
 	var ifrm = parent.document.getElementById('myFrame');
 	if (ifrm) {
