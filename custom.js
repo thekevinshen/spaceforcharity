@@ -161,6 +161,12 @@ function goToUrl(){ //sends myFrame to url from form textfield. utilizes "landin
 	var urlString = document.forms[0].elements["URLfieldName"].value;
 
 	var ifrm = parent.document.getElementById('myFrame');
+	
+	
+	
+	
+	
+	
 	if (ifrm) {
 		var s = urlParse(urlString);
 
