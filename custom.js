@@ -107,6 +107,7 @@ function urlParse(urlString)
 		var indexOfHTTP = urlString.search("http://");
 		if (indexOfHTTP == 0) // the http:// begins at index 0 of the urlString
 		{
+			alert("1");
 			return urlString;
 		}
 
@@ -114,6 +115,7 @@ function urlParse(urlString)
 		var indexOfHTTPS = urlString.search("https://");
 		if (indexOfHTTPS == 0) // the https:// begins at index 0 of the urlString
 		{
+						alert("2");
 			return urlString;
 		}
 
@@ -121,18 +123,26 @@ function urlParse(urlString)
 		var indexOfWWW = urlString.search("www.");
 		if (indexOfWWW == 0) // the www. begins at index 0 of the urlString
 		{
+						alert("3");
 			return "http://"+urlString; // just need to addd http:// to the beginning
 		}
 
 		// 4. Has a period with a character before and a character after (e.g. apple.com, news.net, etc.)
 		var indexOfDot = urlString.lastIndexOf(".");
-		var charBeforeDot = urlString.charAt(indexOfDot-1);
-		var charAfterDot = urlString.charAt(indexOfDot+1);
-
-		if (charBeforeDot != null && charBeforeDot != " " && 
-			charAfterDot != null && charAfterDot != " ")
+		if (indexOfDot != -1) // make sure that it found a period first (index is -1 if no period was found)
 		{
-			return "http://www."+urlString;
+			var charBeforeDot = urlString.charAt(indexOfDot-1);
+			var charAfterDot = urlString.charAt(indexOfDot+1);
+
+
+			alert("charBeforeDot = "+charBeforeDot+"| \n and charAfterDot = "+charAfterDot+"|");
+
+			if (charBeforeDot != null && charBeforeDot != ' ' && 
+				indexOfDot+1 < urlString.length)
+			{
+				alert("4");
+				return "http://www."+urlString;
+			}
 		}
 
 
@@ -148,6 +158,7 @@ function urlParse(urlString)
 		}
 
 		// 2. Append search query string
+					alert("5");
 		return "http://www.bing.com/search?q="+urlString;
 
 }
@@ -158,21 +169,12 @@ function urlParse(urlString)
 
 //--------------------------Navigation Functions-------------------------------
 function goToUrl(){ //sends myFrame to url from form textfield. utilizes "landingGoToIFrameURL(string)" instead of goToIFrameURL(string), otherwise same as goToUrl(form)
-	alert("in gotourl");
 	var urlString = document.forms[0].elements["URLfieldName"].value;
 
 	var ifrm = parent.document.getElementById('myFrame');
 	
 	
-	
-	
-	
-	
 	if (ifrm) {
-		var s = urlParse(urlString);
-
-		alert("S = "+s);
-
 		ifrm.setAttribute('src', urlParse(urlString));
 	}
 }
