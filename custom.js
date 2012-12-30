@@ -85,10 +85,10 @@ function reloadSideBar() {
 //--------------------------URL Parse Functions-------------------------------
 // This method takes in an inputted urlString, parses it according to the best guess of what 
 // website or search the user is trying to navigate to, then returns the parsed string.
-function urlParse(string urlString)
+function urlParse(urlString)
 {
 	// Remove all of the whitespaces before the first character
-		for (int i = 0; i < urlString.length; i++)
+		for (var i = 0; i < urlString.length; i++)
 		{
 			if (urlString.charAt(i) == " ")
 			{
@@ -139,7 +139,7 @@ function urlParse(string urlString)
 	// Else the user is trying to do a search
 
 		// 1. Replace all spaces with '+'
-		for (int i = 0; i < urlString.length; i++)
+		for (var i = 0; i < urlString.length; i++)
 		{
 			if (urlString.charAt(i) == " ")
 			{
@@ -158,6 +158,7 @@ function urlParse(string urlString)
 
 //--------------------------Navigation Functions-------------------------------
 function goToUrl(){ //sends myFrame to url from form textfield. utilizes "landingGoToIFrameURL(string)" instead of goToIFrameURL(string), otherwise same as goToUrl(form)
+	alert("in gotourl");
 	var urlString = document.forms[0].elements["URLfieldName"].value;
 
 	var ifrm = parent.document.getElementById('myFrame');

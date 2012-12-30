@@ -130,7 +130,10 @@ hr{
 	width: 85%;
 	opacity: 0.5;
 }
-
+td{
+	color: white;
+	width: 25%;
+}
 
 /*----Fonts-----*/
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One);

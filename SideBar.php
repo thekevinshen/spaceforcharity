@@ -4,7 +4,7 @@
 	<!--jQuery-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-	<script type="text/javascript" src="custom.js"></script>
+	<script src="custom.js"></script>
 	
 	<?php
 	
@@ -99,7 +99,7 @@
 				</form>
 			</div>
 			<div id="aboutLinks">
-				<a href="" id="howItWorks">How it works</a><font color="lightgray"> | </font><a id="about" href="">About</a><font color="lightgray"> | </font><a id="home" href="" onclick="myFrameReturnHome()">Home</a>
+				<a href="" id="howItWorks">How it works</a><font color="lightgray"> | </font><a id="about" href="">About</a><font color="lightgray">
 			</div>
 			
 
@@ -109,14 +109,6 @@
 			<!--<font color="#c0c0c0">Ads Box</font><br />-->
 		
 			<!--GoogleAdsense-->
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-			
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-			
 			<script type="text/javascript"><!--
 			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
 			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
