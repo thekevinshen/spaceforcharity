@@ -81,14 +81,14 @@
 				<br style="clear:both">
 			</div>
 			<div id="siteStats">
-				<font class="moneyRaised"><small>$</small><?php 	echo($money_raised);	?></font>
+				<h3 class="dollarSign">$</h3><h3 class="moneyRaised"><?php 	echo($money_raised);	?></h3>
 				<font class="statText"> raised</font> <br />
 				<font class="statNumbers"><?php 	echo($newClickCount);	?></font>
 				<font class="statText"> page visits</font> <br />
 				<font class="statNumbers"><?php 	echo($sq_ft);	?></font>
 				<font class="statText"> ft&sup2; screen-space donated</font> <br />
 				
-				<small style="color:gray; float:right; font-size: .5em">(assuming $1 CPM) </small>
+				<!--<small style="color:gray; float:right; font-size: .5em">(assuming $1 CPM) </small>-->
 			</div>
 			<div class="bingBar">
 				<form id="URLform" class="lightGray">
@@ -109,6 +109,14 @@
 			<!--<font color="#c0c0c0">Ads Box</font><br />-->
 		
 			<!--GoogleAdsense-->
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
+			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
+			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			
 			<script type="text/javascript"><!--
 			google_ad_client = "ca-pub-8611093187067707";	/* WideTall */	google_ad_slot = "4884186374";	google_ad_width = 160;	google_ad_height = 600;	//-->	</script>
 			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>

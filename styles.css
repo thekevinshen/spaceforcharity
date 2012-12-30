@@ -17,6 +17,7 @@ iframe{
 	border: none;
 }
 h1{
+	margin-top: 10%;
 	font-size: 1.3em; 
 	font-family: Helvetica;
 	font-style: bold;
@@ -29,12 +30,31 @@ h1{
 .iconClose{
 	float: right;
 }
+.left{
+	float: left;
+	text-align: left;
+}
+.right{
+	float: right;
+	text-align: right;
+}
 /*----------Custom Element Styles-----------*/
+.dollarSign{
+	color:gray; 
+	display: inline; 
+	text-shadow: 1px 1px 1px gray, -1px -1px 1px white;
+	font-size:1em;
+	vertical-align: top;
+	font-style: bold;
+	line-height: 1em;
+}
 .moneyRaised{
 	color:#080; 
-	text-shadow: 1px 1px 1px white, inset -1px -1px 1px black;
+	display: inline; 
+	text-shadow: 1px 1px 1px gray, -1px -1px 1px white;
 	font-size:2em;
-	font-style: bold
+	font-style: bold;
+	margin: 0% 0%;
 }
 .moneyRaised small{
 	text-align: top;
@@ -64,6 +84,7 @@ h1{
 #logoDiv{
 	background-image:url('images/bgnoise_logodark.png');
 	margin-bottom: 5px;
+	margin-top: 5px;
 	box-shadow: 1px 1px 5px #555;
 	height: 80px;
 }
@@ -99,20 +120,39 @@ h1{
 	padding-left: 5px;
 	box-shadow: 0px 1px 2px #999;
 }
+
+/*---------Hidden Divs----------*/
 .hiddenSpread{
 	display: none;
-	background-image:url('images/bgnoise_divdark.png');
 	height: 70%;
-	box-shadow: inset 0px 0px 5px white;
-	border: 1px solid orange;
 	position: absolute;
 	width: 50%;
 	right: 13%;
-	opacity: 0.6;
 	/*font styling*/
 	color: white;
-	padding:20px;
 }
+.hiddenSpreadBG{
+	width: 100%;
+	height: 100%;
+	background-image:url('images/bgnoise_divdark.png');
+	box-shadow: inset 0px 0px 5px white;
+	border: 1px solid orange;
+	opacity: 0.6;
+}
+.hiddenSpreadContents{
+	position: absolute;
+	padding: 20px;
+	top: 0;
+}
+.aboutPics{
+	width: 50%;
+	box-shadow: 1px 1px 2px black;
+}
+.aboutPics .pic{
+	width: 100%;
+	opacity: 1;
+}
+
 /*-------animation styles-------*/
 .grayBG{
 	background-image:url('images/bgnoise.png');

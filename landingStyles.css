@@ -126,7 +126,10 @@ a{
 	text-decoration: none;
 	color: orange;
 }
-
+hr{
+	width: 85%;
+	opacity: 0.5;
+}
 
 
 /*----Fonts-----*/

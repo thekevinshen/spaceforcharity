@@ -12,23 +12,59 @@
 <body>
 	<div class="row">
 		
+		<!--myFrame-->
 		<div class="span9">
 			<iframe id="myFrame" onload="reloadSideBar()" src="landing.html"/></iframe>
 		</div>
+		
+		<!--HowItWorks Div-->
 		<div class="hiddenSpread" id="hiddenHowItWorks">
+			<div class="hiddenSpreadBG">
+			</div>
+			<div class="hiddenSpreadContents">
 				<b>How it works</b>
 				<img src="images/icons/Cross_shadow.png" onmouseover="this.src='images/icons/Cross_shadow_hover2.png'" onmouseout="this.src='images/icons/Cross_shadow.png'" class="icon iconClose"/>
 				<hr />
 				<br/>
 				This is a hidden div.
+			</div>
 		</div>
+		
+		<!--About Div-->
 		<div class="hiddenSpread" id="hiddenAbout">
+			<div class="hiddenSpreadBG">
+			</div>
+			<div class="hiddenSpreadContents">
 				<b>About</b>
 				<img src="images/icons/Cross_shadow.png" onmouseover="this.src='images/icons/Cross_shadow_hover2.png'" onmouseout="this.src='images/icons/Cross_shadow.png'" class="icon iconClose"/>
 				<hr />
-				<br/>
-				This is a hidden div.
+				Hello! <br />
+
+				Thank you for sharing your time and space with those less fortunate! It is an honor to partner with you in making the world a better place, one pixel at a time. <br /><br />
+
+				We are three college students at the University of California who like to build stuff, and have always wanted to use our skills for the benefit of others. 
+				<br />
+				<table class="aboutPics">
+					<tr>
+						<td><img class="pic" src="images/about_pics/kevin.jpg"/></td>
+						<td><img class="pic" src="images/about_pics/ryan.jpg"/></td>
+						<td><img class="pic" src="images/about_pics/johnny.jpg"/></td>
+					</tr>
+					<tr>
+						<td>Kevin Shen</td>
+						<td>Johnny Rusnak</td>
+						<td>Ryan Cleary</td>
+					</tr>
+				</table>
+				<br />
+				Thank you for partnering with us to make the world a better place, one pixel at a time. 
+				<br />
+				"Never doubt that a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has." <br /> 
+				<small class="right">- Margaret Mead</small>
+			</div>
 		</div>
+		
+		<!--SideBar-->
 		<div class="span3">
 			<iframe id="iSideBar" src="SideBar.php"></iframe>
 		</div>
